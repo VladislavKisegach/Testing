@@ -19,10 +19,10 @@ class PaymentTest {
     @Test
     fun payByVisaOrMir_Test() {
         val lastPay = 0
-        val money = 2_022
+        val money = 2_000
         val paymentSystem = PaymentSystem.Mir
         val payment = Payment(paymentSystem)
-        val expectedCommission = 1_503
+        val expectedCommission = 1_500
         val commission = payment.pay(money, lastPay, paymentSystem)
         assertEquals(expectedCommission, format(commission))
     }
